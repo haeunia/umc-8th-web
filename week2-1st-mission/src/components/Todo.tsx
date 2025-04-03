@@ -1,26 +1,26 @@
 import { useState } from "react";
 
 const Todo = () => {
-  // ✅ 상태 선언
+
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState<string[]>([]);
   const [dones, setDones] = useState<string[]>([]);
 
-  // ✅ 할 일 추가 함수
+
   const handleAdd = () => {
     if (input.trim() === "") return;
     setTodos([...todos, input]);
     setInput("");
   };
 
-  // ✅ 완료 처리 함수
+  
   const handleComplete = (index: number) => {
     const completed = todos[index];
     setTodos(todos.filter((_, i) => i !== index));
     setDones([...dones, completed]);
   };
 
-  // ✅ 삭제 함수
+ 
   const handleDelete = (index: number) => {
     setDones(dones.filter((_, i) => i !== index));
   };
@@ -29,7 +29,7 @@ const Todo = () => {
     <div>
       <h1>UMC Study Plan</h1>
 
-      {/* ✅ 입력창 */}
+      {/* 입력창 */}
       <input
         type="text"
         value={input}
@@ -41,13 +41,13 @@ const Todo = () => {
         required
       />
 
-      {/* ✅ 추가 버튼 */}
+      {/* 추가 버튼 */}
       <button type="submit" onClick={handleAdd}>
         할 일 추가
       </button>
 
       <div className="lists">
-        {/* ✅ 해야 할 일 리스트 */}
+        {/*  해야 할 일 리스트 */}
         <div className="list-container">
           <h2>해야 할 일</h2>
           <ul>
@@ -65,7 +65,7 @@ const Todo = () => {
           </ul>
         </div>
 
-        {/* ✅ 해낸 일 리스트 */}
+        {/* 해낸 일 리스트 */}
         <div className="list-container">
           <h2>해낸 일</h2>
           <ul>
