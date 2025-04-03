@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 80px 300px 200px 200px 100px;
+      grid-template-areas:
+        "header menu menu"
+        "hero hero hero"
+        "main . image"
+        "main . extra"
+        "banner banner banner";
+      height: 100vh;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #0f1626;
+      color: white;
+    }
+
+    .menu {
+      grid-area: menu;
+      background-color: #ef3b4c;
+      color: white;
+    }
+
+    .hero {
+      grid-area: hero;
+      background-color: #4a90e2;
+      color: white;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #1d2d44;
+      color: white;
+    }
+
+    .image {
+      grid-area: image;
+      background-color: #c5e5e3;
+      color: black;
+    }
+
+    .extra {
+      grid-area: extra;
+      background-color: #53c29c;
+      color: black;
+    }
+
+    .banner {
+      grid-area: banner;
+      background-color: #fbd26a;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item header">HEADER</div>
+    <div class="item menu">MENU</div>
+    <div class="item hero">HERO</div>
+    <div class="item main">MAIN</div>
+    <div class="item image">IMAGE</div>
+    <div class="item extra">EXTRA</div>
+    <div class="item banner">BANNER</div>
+  </div>
+</body>
+</html>

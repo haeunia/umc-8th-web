@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>UMC Study Plan - TS</title>
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 60%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    .lists {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+    .list-container {
+      width: 200px;
+      text-align: left;
+    }
+    .list-container h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      padding: 4px 8px;
+      font-size: 12px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .complete-btn {
+      background-color: #d0e3ff;
+    }
+    .delete-btn {
+      background-color: #ffd1d1;
+    }
+  </style>
+</head>
+<body>
+  <h1>UMC Study Plan - TypeScript</h1>
+
+  <input type="text" id="taskInput" placeholder="스터디 계획을 작성해보세요!" />
+
+  <div class="lists">
+    <div class="list-container">
+      <h2>해야 할 일</h2>
+      <ul id="todoList"></ul>
+    </div>
+    <div class="list-container">
+      <h2>해낸 일</h2>
+      <ul id="doneList"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="../dist/week1/week1_ts_mission1.js"></script>
+</body>
+</html>
