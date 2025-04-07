@@ -1,12 +1,16 @@
+
 import './App.css';
 import Todo from './components/Todo';
+import TodoBefore from './components/TodoBefore';
 
-function App(): Element {
-  return( 
+export default function App(): Element {
+  return ( 
   <> 
     <Todo />
+
+    <TodoBefore />
+
      </>
  );
 }
 
-export default App
