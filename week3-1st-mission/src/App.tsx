@@ -5,6 +5,9 @@ import Popular from "./pages/Popular"
 import Upcoming from "./pages/Upcoming"
 import TopRated from "./pages/TopRated"
 import NowPlaying from "./pages/NowPlaying"
+import MoviePage from "./pages/MoviePage" 
+
+
 
 export default function App() {
   return (
@@ -15,6 +18,8 @@ export default function App() {
         <Route path="/movies/upcoming" element={<Upcoming />} />
         <Route path="/movies/top-rated" element={<TopRated />} />
         <Route path="/movies/now_playing" element={<NowPlaying />} />
+        <Route path="/movies/:movieId" element={<MoviePage />} />
+
       </Route>
     </Routes>
   )
