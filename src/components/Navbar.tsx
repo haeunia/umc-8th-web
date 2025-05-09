@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import './Navbar.css'; // 스타일 분리하고 싶으면 이 파일 만들고 적용
+import './Navbar.css'; 
 
 function Navbar() {
   const location = useLocation();
@@ -15,7 +15,6 @@ function Navbar() {
       padding: '0 20px',
       color: '#f50057',
     }}>
-      <div style={{ fontWeight: 'bold' }}>돌려돌려LP판</div>
       <div>
         <Link to="/login">
           <button
