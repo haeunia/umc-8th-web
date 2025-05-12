@@ -1,7 +1,11 @@
+import React from 'react';
+import { useAuth } from '@/hooks/useAuth';
+
 const LoginPage = () => {
+    const { login } = useAuth();
+
     const handleLogin = () => {
-        localStorage.setItem('authToken', 'dummyToken');
-        window.location.href = '/week5/premium';
+        login();
     };
 
     return (
