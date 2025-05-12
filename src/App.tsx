@@ -3,19 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import PremiumPage from './pages/PremiumPage';
-import { AuthProvider } from './context/AuthContext';
+import GoogleLoginPage from './pages/GoogleLoginPage';
 
 function App() {
     return (
-        <AuthProvider>
-            <Router basename="/week5">
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/login" element={<LoginPage />} />
-                    <Route path="/premium" element={<PremiumPage />} />
-                </Routes>
-            </Router>
-        </AuthProvider>
+        <Router basename="/week5">
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/premium" element={<PremiumPage />} />
+                <Route path="/auth/callback" element={<GoogleLoginPage />} />
+            </Routes>
+        </Router>
     );
 }
 
