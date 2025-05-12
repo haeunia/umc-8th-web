@@ -1,10 +1,10 @@
-// vite.config.ts
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/week5/',  // 경로 수정
   server: {
-    port: 5173, // 원하는 포트 설정 가능
+    port: 3000,
   },
 });
